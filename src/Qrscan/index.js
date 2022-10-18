@@ -18,14 +18,14 @@ const Qrscan = () => {
 	}
 
 	const previewStyle = {
-		height: 240,
-		width: 320,
+		height: "240px",
+		width: "320px",
 	}
 
 	return (
-		<div className={styles.container}>
+		<div style={styles.container}>
 			<QrReader
-			delay={500}
+			// scanDelay={500}
 			style={previewStyle}
 			// onError={handleError}
 			// onScan={handleScan}
@@ -39,7 +39,7 @@ const Qrscan = () => {
                 }
               }}            
 			/>
-			<div className={styles.result}>{result}</div>		
+			<div style={styles.result}>{result}</div>		
 		</div>
 	);
 }
