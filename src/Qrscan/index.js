@@ -23,7 +23,7 @@ const Qrscan = () => {
 	}
 
 	return (
-		<div style={styles.container}>
+		<div >
 			<QrReader
 			// scanDelay={500}
 			style={previewStyle}
@@ -39,7 +39,7 @@ const Qrscan = () => {
                 }
               }}            
 			/>
-			<div style={styles.result}>{result}</div>		
+			<div>{result}</div>		
 		</div>
 	);
 }
