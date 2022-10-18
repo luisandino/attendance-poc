@@ -27,8 +27,17 @@ const Qrscan = () => {
 			<QrReader
 			delay={500}
 			style={previewStyle}
-			onError={handleError}
-			onScan={handleScan}
+			// onError={handleError}
+			// onScan={handleScan}
+            onResult={(result, error) => {
+                if (!!result) {
+                    setResult(result?.text);
+                }
+      
+                if (!!error) {
+                  console.error(error);
+                }
+              }}            
 			/>
 			<div className={styles.result}>{result}</div>		
 		</div>
